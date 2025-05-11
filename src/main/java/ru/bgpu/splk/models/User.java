@@ -1,9 +1,7 @@
 package ru.bgpu.splk.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import ru.bgpu.splk.models.Role;
 
 @Entity
 @Table(name = "users")
@@ -15,4 +13,6 @@ public class User {
     private String name;
     private String surname;
 
+    @ManyToOne
+    private Group group;
 }
