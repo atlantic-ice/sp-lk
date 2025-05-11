@@ -15,4 +15,8 @@ public class User {
 
     @ManyToOne
     private Group group;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
 }
